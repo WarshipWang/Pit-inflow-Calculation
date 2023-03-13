@@ -3,7 +3,7 @@
 Created on Tue Nov 15 14:20:29 2022
 Equation to get pit inflows
 Ref: Marinelli, F. & Niccoli, W (2000): Simple Analytical Equations for Estimating Groundwater Inflow to a Mine Pit. Groundwater Journal, Volume 38, No.2, March-April 2000 (p311-314)
-@author: JuWang
+@author: Junjian Wang
 """
 
 from scipy.optimize import fsolve
@@ -31,8 +31,3 @@ print(ro)
 Q1 = W * math.pi * (ro ** 2 - rp ** 2)                      # Calculated inflow from Zone 1, m3/s
 Q2 = 4*rp*(Kh2/m2)*(h0-d)                                   # Calculated inflow from Zone 2, m3/s
  
-
-h0_ro= math.sqrt(hp ** 2 + W/Kh1*(ro ** 2 * math.log(ro/rp)-(ro ** 2 - rp ** 2)/2))
-
-print(h0_ro)
-print(h0)
